@@ -6,13 +6,13 @@
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 18:41:15 by areggie           #+#    #+#             */
-/*   Updated: 2020/11/22 20:46:38 by areggie          ###   ########.fr       */
+/*   Updated: 2021/04/09 20:16:41 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 	{

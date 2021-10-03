@@ -6,13 +6,13 @@
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 22:41:19 by areggie           #+#    #+#             */
-/*   Updated: 2020/11/15 15:04:33 by areggie          ###   ########.fr       */
+/*   Updated: 2021/04/09 20:17:08 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 	{

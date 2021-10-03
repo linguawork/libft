@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 15:48:16 by areggie           #+#    #+#             */
-/*   Updated: 2021/04/09 19:40:29 by areggie          ###   ########.fr       */
+/*   Created: 2021/03/01 19:28:54 by areggie           #+#    #+#             */
+/*   Updated: 2021/04/10 21:33:44 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putstr(char *str)
 {
-	char	*result;
-	size_t	i;
-
-	result = (char *)s;
-	i = 0;
-	while (i < n)
+	while (*str != '\0')
 	{
-		result[i] = '\0';
-		i++;
+		ft_putchar(*str);
+		str++;
 	}
 }

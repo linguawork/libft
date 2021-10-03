@@ -6,11 +6,20 @@
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/16 18:15:10 by areggie           #+#    #+#             */
-/*   Updated: 2020/11/23 20:25:34 by areggie          ###   ########.fr       */
+/*   Updated: 2021/04/10 20:33:25 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	*ft_mem_alloc(char	*str, size_t arr_length)
+{
+	str = (char *)malloc(sizeof(char) * (arr_length + 1));
+	if (!str)
+		return (NULL);
+	else
+		return (str);
+}
 
 static int	itlen(int n)
 {
@@ -29,14 +38,14 @@ static int	itlen(int n)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
 
+	str = NULL;
 	len = itlen(n);
-	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
-		return (NULL);
+	str = ft_mem_alloc(str, len);
 	str[len] = '\0';
 	if (n == 0)
 		str[0] = '0';

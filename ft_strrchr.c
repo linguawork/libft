@@ -6,7 +6,7 @@
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 21:02:40 by areggie           #+#    #+#             */
-/*   Updated: 2020/11/22 19:02:31 by areggie          ###   ########.fr       */
+/*   Updated: 2021/04/10 22:32:49 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int k;
+	int	k;
 
 	k = 0;
 	while (s[k])
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (k >= 0)
 	{
 		if (s[k] == c)
-			return ((char*)s + k);
+			return ((char *)s + k);
 		k--;
 	}
 	return (NULL);

@@ -6,13 +6,13 @@
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 21:18:28 by areggie           #+#    #+#             */
-/*   Updated: 2020/11/23 21:54:41 by dnicki           ###   ########.fr       */
+/*   Updated: 2021/04/09 19:39:53 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
 	int	result;

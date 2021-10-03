@@ -6,13 +6,13 @@
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 23:17:49 by areggie           #+#    #+#             */
-/*   Updated: 2020/11/22 17:22:48 by areggie          ###   ########.fr       */
+/*   Updated: 2021/04/10 21:29:50 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*a;
 	unsigned char	*b;

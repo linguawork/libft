@@ -6,11 +6,20 @@
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 22:26:28 by areggie           #+#    #+#             */
-/*   Updated: 2020/11/24 17:50:18 by areggie          ###   ########.fr       */
+/*   Updated: 2021/04/10 22:02:10 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	*split_m_alloc(char	**str, size_t arr_length)
+{
+	str = (char **)malloc(sizeof(char *) * (arr_length + 1));
+	if (str == NULL)
+		return (NULL);
+	else
+		return (str);
+}
 
 static int	wordsinside(char const *s, char c)
 {
@@ -34,7 +43,7 @@ static int	wordsinside(char const *s, char c)
 
 static int	wordlength(const char *s, char c)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	while (s[len] != '\0' && s[len] != c)
@@ -53,26 +62,26 @@ static void	freespace(char ***str, int a)
 	*str = NULL;
 }
 
-char		**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**output;
 	int		word_number;
 	int		i;
 	int		j;
 
+	output = NULL;
 	if (s == NULL)
 		return (NULL);
 	word_number = wordsinside(s, c);
-	output = (char**)malloc(sizeof(char*) * (word_number + 1));
-	if (output == NULL)
-		return (NULL);
+	output = split_m_alloc(output, word_number);
 	i = 0;
 	j = 0;
 	while (i < word_number)
 	{
 		while (s[j] != '\0' && s[j] == c)
 			j++;
-		if (!(output[i] = ft_substr(s, j, wordlength(s + j, c))))
+		output[i] = ft_substr(s, j, wordlength(s + j, c));
+		if (!output[i])
 			freespace(&output, i - 1);
 		while (s[j] != '\0' && s[j] != c)
 			j++;

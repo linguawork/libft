@@ -6,13 +6,13 @@
 /*   By: areggie <areggie@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 16:17:27 by areggie           #+#    #+#             */
-/*   Updated: 2020/11/23 16:56:01 by areggie          ###   ########.fr       */
+/*   Updated: 2021/04/10 22:29:56 by areggie          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*s3;
 	size_t	i;
@@ -37,5 +37,6 @@ char		*ft_strjoin(char const *s1, char const *s2)
 		j++;
 	}
 	s3[i] = '\0';
+	free(s1);
 	return (s3);
 }
